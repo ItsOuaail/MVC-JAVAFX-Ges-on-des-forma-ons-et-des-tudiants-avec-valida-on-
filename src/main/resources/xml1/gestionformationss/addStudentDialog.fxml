@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
-<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="xml1.gestionformationss.controller.AddStudentController">
-    <padding>
-        <Insets top="10" right="10" bottom="10" left="10"/>
-    </padding>
+<?import javafx.scene.layout.*?>
 
-    <Label text="Ajouter un étudiant"/>
-    <TextField fx:id="idField" promptText="ID"/>
-    <TextField fx:id="nameField" promptText="Nom"/>
-    <TextField fx:id="moyField" promptText="Moyenne"/>
-    <Button fx:id="saveButton" text="Enregistrer"/>
-    <Button fx:id="cancelButton" text="Annuler"/>
+<VBox spacing="15" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="xml1.gestionformationss.controller.AddStudentController"
+      style="-fx-background-color: #f4f4f9; -fx-padding: 20;">
+
+    <!-- Title -->
+    <Label text="Ajouter un étudiant"
+           style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #2A2A2A;"/>
+
+    <!-- Input Fields Section -->
+    <VBox spacing="10" alignment="CENTER"
+          style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #dddddd; -fx-border-radius: 10;">
+
+        <TextField fx:id="idField" promptText="ID"
+                   style="-fx-background-color: #e8f0fe; -fx-border-color: #a6b9df; -fx-border-radius: 5;"/>
+        <TextField fx:id="nameField" promptText="Nom"
+                   style="-fx-background-color: #e8f0fe; -fx-border-color: #a6b9df; -fx-border-radius: 5;"/>
+        <TextField fx:id="moyField" promptText="Moyenne"
+                   style="-fx-background-color: #e8f0fe; -fx-border-color: #a6b9df; -fx-border-radius: 5;"/>
+    </VBox>
+
+    <!-- Button Section -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="saveButton" text="Enregistrer"
+                style="-fx-background-color: #2A9D8F; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-pref-width: 120;"/>
+        <Button fx:id="cancelButton" text="Annuler"
+                style="-fx-background-color: #FF6F61; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-pref-width: 120;"/>
+    </HBox>
+
 </VBox>
